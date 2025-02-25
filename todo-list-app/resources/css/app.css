@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.steps-block {
+    background-color: #e1eaeb5e;
+    border-radius: 10px;
+}
