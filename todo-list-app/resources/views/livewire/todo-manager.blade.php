@@ -200,12 +200,12 @@ new class extends Component {
                             <p class="text-gray-500 text-sm">{{ $todo->description }}</p>
                         </td>
                         <td class="p-3 w-1/4 text-center">
-                            <ul>
+                            <ul class="space-y-2">
                                 @if ($todo->smallSteps->isEmpty())
                                     <p class="text-gray-500 italic">No subtasks</p>
                                 @else
                                     @foreach ($todo->smallSteps as $step)
-                                        <li>
+                                        <li class="flex items-center gap-2 justify-center w-full">
                                             <input type="checkbox"
                                                 wire:click="toggleSmallStepCompletion({{ $step->id }})"
                                                 class="h-4 w-4 text-green-500" {{ $step->completed ? 'checked' : '' }}>
